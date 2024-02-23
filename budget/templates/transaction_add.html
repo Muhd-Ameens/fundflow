@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block title_block%}
+
+<title>Transaction Add</title>
+
+{%endblock%}
+
+
+
+{%block main_block%}
+<div class="container">
+        
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 shadow p-5 mt-5">
+            <form action="" method="post">
+                <h2 class="text-center fw-bold">Add Transactions </h2>
+                {%csrf_token%}
+                {{form.as_p}}
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-dark me-md-2">Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+{%endblock%}
